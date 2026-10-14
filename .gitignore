@@ -43,7 +43,10 @@ venv.bak/
 *.bin
 *.onnx
 *.safetensors
+*.joblib
 checkpoints/
+results/models/*
+!results/models/.gitkeep
 
 # IDE files
 .vscode/
