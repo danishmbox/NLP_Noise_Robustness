@@ -113,6 +113,37 @@ def load_train_and_dev_data(data_dir: Path) -> Tuple[pd.DataFrame, pd.DataFrame]
     return train_df, dev_df
 
 
+def load_dev_data(data_dir: Path) -> pd.DataFrame:
+    """
+    Loads and validates ONLY dev.csv from data/processed/.
+    Strictly avoids touching or loading train.csv or test.csv.
+
+    Args:
+        data_dir: Path to directory containing processed CSVs (e.g. data/processed/).
+
+    Returns:
+        Validated dev DataFrame with sanitized text and numeric 'label' column.
+
+    Raises:
+        FileNotFoundError: If dev.csv is missing.
+        ValueError: If validation fails.
+    """
+    guard_against_test_set_usage("dev")
+    dev_path = data_dir / "dev.csv"
+    if not dev_path.exists():
+        raise FileNotFoundError(
+            f"Required development dataset file not found: {dev_path}."
+        )
+
+    dev_df = pd.read_csv(dev_path, dtype={"uid": str, "text": str, "sentiment": str})
+    validate_dataset_schema(dev_df, "dev")
+    dev_df["text"] = dev_df["text"].fillna("")
+    dev_df["sentiment"] = dev_df["sentiment"].str.strip().str.lower()
+    validate_dataset_schema(dev_df, "dev")
+    dev_df["label"] = dev_df["sentiment"].map(LABEL2ID)
+    return dev_df
+
+
 def guard_against_test_set_usage(split_requested: str) -> None:
     """
     Enforces the Stage 1 rule strictly prohibiting test.csv access during training.

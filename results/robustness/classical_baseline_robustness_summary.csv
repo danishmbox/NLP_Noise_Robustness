@@ -1,0 +1,10 @@
+model_name,model_slug,noise_type,severity,severity_pct,macro_f1,delta_macro_f1,retention_pct,accuracy,delta_accuracy,weighted_f1,neg_f1,neu_f1,pos_f1,sample_count,seed
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,clean,0.0,0%,0.5915,0.0,100.0,0.5877,0.0,0.5863,0.6316,0.5096,0.6334,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.05,5%,0.5759,0.0156,97.36,0.571,0.0167,0.5713,0.6131,0.5037,0.6109,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.1,10%,0.5537,0.0378,93.61,0.5487,0.039,0.5503,0.5824,0.5021,0.5766,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.15,15%,0.5304,0.0611,89.67,0.5263,0.0614,0.5278,0.5652,0.4984,0.5278,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.2,20%,0.5238,0.0677,88.55,0.5223,0.0654,0.5232,0.5223,0.511,0.5381,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.05,5%,0.5892,0.0023,99.61,0.5853,0.0024,0.5841,0.628,0.5091,0.6304,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.1,10%,0.5833,0.0082,98.61,0.5793,0.0084,0.578,0.6262,0.5016,0.6221,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.15,15%,0.5913,0.0002,99.97,0.587,0.0007,0.5862,0.6352,0.516,0.6225,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.2,20%,0.5824,0.0091,98.46,0.5783,0.0094,0.5774,0.6209,0.5034,0.6231,3000,42
