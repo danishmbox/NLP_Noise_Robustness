@@ -1,0 +1,2 @@
+model_name,evaluation_split,macro_f1,accuracy,weighted_f1,neg_f1,neu_f1,pos_f1,sample_count,timestamp
+classical_baseline,dev,0.5915,0.5877,0.5863,0.6316,0.5096,0.6334,3000,2026-10-14T09:42:41.586288

@@ -1,0 +1,108 @@
+{
+  "model_slug": "classical_baseline",
+  "config": {
+    "model_family": "classical",
+    "model_name": "classical_baseline",
+    "word_ngram_range": [
+      1,
+      2
+    ],
+    "char_ngram_range": [
+      2,
+      5
+    ],
+    "word_max_features": 50000,
+    "char_max_features": 50000,
+    "word_min_df": 2,
+    "char_min_df": 2,
+    "sublinear_tf": true,
+    "svm_c": 1.0,
+    "svm_loss": "squared_hinge",
+    "svm_max_iter": 2000,
+    "random_seed": 42
+  },
+  "seed_info": {
+    "seed": 42,
+    "python_random": true,
+    "numpy_random": true,
+    "os_pythonhashseed": true,
+    "pytorch_seeded": false,
+    "cuda_deterministic": false
+  },
+  "fit_duration_seconds": 18.18,
+  "runtime_meta": {
+    "timestamp": "2026-10-14T09:42:46.012341",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "git_commit": "9a64fc2",
+    "dependencies": {
+      "scikit-learn": "not_installed",
+      "numpy": "2.4.2",
+      "pandas": "3.0.5",
+      "joblib": "1.6.0",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.2",
+      "seaborn": "0.13.2",
+      "torch": "not_installed",
+      "transformers": "not_installed",
+      "accelerate": "not_installed",
+      "datasets": "not_installed",
+      "evaluate": "not_installed"
+    },
+    "cuda_available": false
+  },
+  "validation_metrics": {
+    "evaluation_phase": "Stage_1_Model_Training_Validation",
+    "evaluation_split": "dev",
+    "is_final_test_evaluation": false,
+    "model_name": "classical_baseline",
+    "timestamp": "2026-10-14T09:42:41.586288",
+    "primary_metric": "macro_f1",
+    "macro_f1": 0.5915,
+    "accuracy": 0.5877,
+    "weighted_f1": 0.5863,
+    "per_class": {
+      "negative": {
+        "precision": 0.6041,
+        "recall": 0.6618,
+        "f1": 0.6316,
+        "support": 890
+      },
+      "neutral": {
+        "precision": 0.5254,
+        "recall": 0.4947,
+        "f1": 0.5096,
+        "support": 1128
+      },
+      "positive": {
+        "precision": 0.6397,
+        "recall": 0.6273,
+        "f1": 0.6334,
+        "support": 982
+      }
+    },
+    "confusion_matrix": [
+      [
+        589,
+        236,
+        65
+      ],
+      [
+        288,
+        558,
+        282
+      ],
+      [
+        98,
+        268,
+        616
+      ]
+    ],
+    "labels_order": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "sample_count": 3000
+  }
+}

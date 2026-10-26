@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+    "model_slug": "classical_baseline",
+    "model_type": "classical",
+    "model_path": "C:\\Users\\Danish ahmad\\.gemini\\antigravity-ide\\scratch\\NLP_Noise_Robustness\\results\\models\\classical_baseline_pipeline.joblib",
+    "seed": 42,
+    "severities": [
+      0.05,
+      0.1,
+      0.15,
+      0.2
+    ],
+    "runtime": {
+      "timestamp": "2026-10-17T13:15:54.135301",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+      "git_commit": "c24e8c1",
+      "dependencies": {
+        "scikit-learn": "not_installed",
+        "numpy": "2.4.2",
+        "pandas": "3.0.5",
+        "joblib": "1.6.0",
+        "scipy": "1.17.1",
+        "matplotlib": "3.11.2",
+        "seaborn": "0.13.2",
+        "torch": "not_installed",
+        "transformers": "not_installed",
+        "accelerate": "not_installed",
+        "datasets": "not_installed",
+        "evaluate": "not_installed"
+      },
+      "cuda_available": false
+    },
+    "clean_baseline": {
+      "macro_f1": 0.5915,
+      "accuracy": 0.5877,
+      "weighted_f1": 0.5863
+    }
+  },
+  "experiments": {
+    "clean": {
+      "evaluation_phase": "Stage_1_Model_Training_Validation",
+      "evaluation_split": "dev",
+      "is_final_test_evaluation": false,
+      "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+      "timestamp": "2026-10-17T13:15:49.889592",
+      "primary_metric": "macro_f1",
+      "macro_f1": 0.5915,
+      "accuracy": 0.5877,
+      "weighted_f1": 0.5863,
+      "per_class": {
+        "negative": {
+          "precision": 0.6041,
+          "recall": 0.6618,
+          "f1": 0.6316,
+          "support": 890
+        },
+        "neutral": {
+          "precision": 0.5254,
+          "recall": 0.4947,
+          "f1": 0.5096,
+          "support": 1128
+        },
+        "positive": {
+          "precision": 0.6397,
+          "recall": 0.6273,
+          "f1": 0.6334,
+          "support": 982
+        }
+      },
+      "confusion_matrix": [
+        [
+          589,
+          236,
+          65
+        ],
+        [
+          288,
+          558,
+          282
+        ],
+        [
+          98,
+          268,
+          616
+        ]
+      ],
+      "labels_order": [
+        "negative",
+        "neutral",
+        "positive"
+      ],
+      "sample_count": 3000
+    },
+    "typo": {
+      "5%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:50.415123",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5759,
+        "accuracy": 0.571,
+        "weighted_f1": 0.5713,
+        "per_class": {
+          "negative": {
+            "precision": 0.6093,
+            "recall": 0.6169,
+            "f1": 0.6131,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.5004,
+            "recall": 0.5071,
+            "f1": 0.5037,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6192,
+            "recall": 0.6029,
+            "f1": 0.6109,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            549,
+            269,
+            72
+          ],
+          [
+            264,
+            572,
+            292
+          ],
+          [
+            88,
+            302,
+            592
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "10%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:50.942680",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5537,
+        "accuracy": 0.5487,
+        "weighted_f1": 0.5503,
+        "per_class": {
+          "negative": {
+            "precision": 0.5932,
+            "recall": 0.5719,
+            "f1": 0.5824,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.4762,
+            "recall": 0.531,
+            "f1": 0.5021,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6086,
+            "recall": 0.5479,
+            "f1": 0.5766,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            509,
+            300,
+            81
+          ],
+          [
+            264,
+            599,
+            265
+          ],
+          [
+            85,
+            359,
+            538
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "15%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:51.477784",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5304,
+        "accuracy": 0.5263,
+        "weighted_f1": 0.5278,
+        "per_class": {
+          "negative": {
+            "precision": 0.5977,
+            "recall": 0.536,
+            "f1": 0.5652,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.4634,
+            "recall": 0.539,
+            "f1": 0.4984,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.5551,
+            "recall": 0.5031,
+            "f1": 0.5278,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            477,
+            309,
+            104
+          ],
+          [
+            228,
+            608,
+            292
+          ],
+          [
+            93,
+            395,
+            494
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "20%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:52.016100",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5238,
+        "accuracy": 0.5223,
+        "weighted_f1": 0.5232,
+        "per_class": {
+          "negative": {
+            "precision": 0.5732,
+            "recall": 0.4798,
+            "f1": 0.5223,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.4596,
+            "recall": 0.5754,
+            "f1": 0.511,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.5824,
+            "recall": 0.5,
+            "f1": 0.5381,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            427,
+            357,
+            106
+          ],
+          [
+            233,
+            649,
+            246
+          ],
+          [
+            85,
+            406,
+            491
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      }
+    },
+    "transliteration": {
+      "5%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:52.543938",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5892,
+        "accuracy": 0.5853,
+        "weighted_f1": 0.5841,
+        "per_class": {
+          "negative": {
+            "precision": 0.6021,
+            "recall": 0.6562,
+            "f1": 0.628,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.5244,
+            "recall": 0.4947,
+            "f1": 0.5091,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6356,
+            "recall": 0.6253,
+            "f1": 0.6304,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            584,
+            236,
+            70
+          ],
+          [
+            288,
+            558,
+            282
+          ],
+          [
+            98,
+            270,
+            614
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "10%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:53.072881",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5833,
+        "accuracy": 0.5793,
+        "weighted_f1": 0.578,
+        "per_class": {
+          "negative": {
+            "precision": 0.5998,
+            "recall": 0.6551,
+            "f1": 0.6262,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.5164,
+            "recall": 0.4876,
+            "f1": 0.5016,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6282,
+            "recall": 0.6161,
+            "f1": 0.6221,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            583,
+            238,
+            69
+          ],
+          [
+            289,
+            550,
+            289
+          ],
+          [
+            100,
+            277,
+            605
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "15%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:53.604053",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5913,
+        "accuracy": 0.587,
+        "weighted_f1": 0.5862,
+        "per_class": {
+          "negative": {
+            "precision": 0.6136,
+            "recall": 0.6584,
+            "f1": 0.6352,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.5242,
+            "recall": 0.508,
+            "f1": 0.516,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6324,
+            "recall": 0.613,
+            "f1": 0.6225,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            586,
+            234,
+            70
+          ],
+          [
+            275,
+            573,
+            280
+          ],
+          [
+            94,
+            286,
+            602
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      },
+      "20%": {
+        "evaluation_phase": "Stage_1_Model_Training_Validation",
+        "evaluation_split": "dev",
+        "is_final_test_evaluation": false,
+        "model_name": "Model A: Word+Char TF-IDF + LinearSVC",
+        "timestamp": "2026-10-17T13:15:54.132301",
+        "primary_metric": "macro_f1",
+        "macro_f1": 0.5824,
+        "accuracy": 0.5783,
+        "weighted_f1": 0.5774,
+        "per_class": {
+          "negative": {
+            "precision": 0.5985,
+            "recall": 0.6449,
+            "f1": 0.6209,
+            "support": 890
+          },
+          "neutral": {
+            "precision": 0.5143,
+            "recall": 0.4929,
+            "f1": 0.5034,
+            "support": 1128
+          },
+          "positive": {
+            "precision": 0.6302,
+            "recall": 0.6161,
+            "f1": 0.6231,
+            "support": 982
+          }
+        },
+        "confusion_matrix": [
+          [
+            574,
+            251,
+            65
+          ],
+          [
+            282,
+            556,
+            290
+          ],
+          [
+            103,
+            274,
+            605
+          ]
+        ],
+        "labels_order": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "sample_count": 3000
+      }
+    }
+  }
+}
