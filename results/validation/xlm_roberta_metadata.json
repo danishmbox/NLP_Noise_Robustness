@@ -1,0 +1,166 @@
+{
+  "model_slug": "xlm_roberta",
+  "checkpoint": "xlm-roberta-base",
+  "config": {
+    "model_family": "transformer",
+    "model_name": "xlm_roberta",
+    "checkpoint": "xlm-roberta-base",
+    "max_length": 128,
+    "learning_rate": 2e-05,
+    "batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 3,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "random_seed": 42,
+    "early_stopping_patience": 2,
+    "fp16": true,
+    "output_dir": "results/models"
+  },
+  "seed_info": {
+    "seed": 42,
+    "python_random": true,
+    "numpy_random": true,
+    "os_pythonhashseed": true,
+    "pytorch_seeded": true,
+    "cuda_deterministic": true
+  },
+  "truncation_analysis": {
+    "train": {
+      "split": "train",
+      "sample_count": 14000,
+      "max_length_configured": 128,
+      "truncated_count": 0,
+      "truncation_percentage": 0.0,
+      "min_token_length": 3,
+      "mean_token_length": 44.9,
+      "median_token_length": 47.0,
+      "p95_token_length": 59.0,
+      "max_token_length": 104
+    },
+    "dev": {
+      "split": "dev",
+      "sample_count": 3000,
+      "max_length_configured": 128,
+      "truncated_count": 0,
+      "truncation_percentage": 0.0,
+      "min_token_length": 12,
+      "mean_token_length": 45.2,
+      "median_token_length": 48.0,
+      "p95_token_length": 60.0,
+      "max_token_length": 102
+    }
+  },
+  "total_train_duration_seconds": 556.58,
+  "runtime_meta": {
+    "timestamp": "2026-10-17T06:49:37.126817",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "python_version": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "git_commit": "c24e8c1",
+    "dependencies": {
+      "scikit-learn": "not_installed",
+      "numpy": "2.1.3",
+      "pandas": "2.2.3",
+      "joblib": "1.6.0",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.0",
+      "seaborn": "0.13.2",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.18.0",
+      "accelerate": "1.15.0",
+      "datasets": "4.8.5",
+      "evaluate": "not_installed"
+    },
+    "cuda_available": true,
+    "device_name": "Tesla T4",
+    "device_count": 1
+  },
+  "reproducibility_caveats": {
+    "gpu_non_determinism": "Certain PyTorch CUDA convolution and reduction algorithms have non-deterministic atomic operations even when torch.backends.cudnn.deterministic is enabled.",
+    "mixed_precision": "FP16 and BF16 mixed-precision floating-point arithmetic can introduce minor rounding divergence compared to standard FP32 operations.",
+    "hardware_variation": "Executing on different GPU microarchitectures (e.g. Tesla T4 vs A100 vs V100) yields numerical precision differences in matrix multiplication."
+  },
+  "best_validation_metrics": {
+    "evaluation_phase": "Stage_1_Model_Training_Validation",
+    "evaluation_split": "dev",
+    "is_final_test_evaluation": false,
+    "model_name": "xlm_roberta",
+    "timestamp": "2026-10-17T06:49:28.935008",
+    "primary_metric": "macro_f1",
+    "macro_f1": 0.6313,
+    "accuracy": 0.6283,
+    "weighted_f1": 0.6265,
+    "per_class": {
+      "negative": {
+        "precision": 0.6165,
+        "recall": 0.6989,
+        "f1": 0.6551,
+        "support": 890
+      },
+      "neutral": {
+        "precision": 0.5769,
+        "recall": 0.5222,
+        "f1": 0.5482,
+        "support": 1128
+      },
+      "positive": {
+        "precision": 0.6948,
+        "recall": 0.6864,
+        "f1": 0.6906,
+        "support": 982
+      }
+    },
+    "confusion_matrix": [
+      [
+        622,
+        219,
+        49
+      ],
+      [
+        292,
+        589,
+        247
+      ],
+      [
+        95,
+        213,
+        674
+      ]
+    ],
+    "labels_order": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "sample_count": 3000
+  },
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9406,
+      "dev_loss": 0.8321,
+      "dev_macro_f1": 0.6196,
+      "dev_accuracy": 0.6173,
+      "dev_weighted_f1": 0.6138,
+      "epoch_duration_seconds": 171.6
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7987,
+      "dev_loss": 0.8325,
+      "dev_macro_f1": 0.6265,
+      "dev_accuracy": 0.6223,
+      "dev_weighted_f1": 0.6217,
+      "epoch_duration_seconds": 176.22
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7081,
+      "dev_loss": 0.8397,
+      "dev_macro_f1": 0.6313,
+      "dev_accuracy": 0.6283,
+      "dev_weighted_f1": 0.6265,
+      "epoch_duration_seconds": 177.05
+    }
+  ]
+}

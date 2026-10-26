@@ -1,0 +1,166 @@
+{
+  "model_slug": "mbert",
+  "checkpoint": "bert-base-multilingual-cased",
+  "config": {
+    "model_family": "transformer",
+    "model_name": "mbert",
+    "checkpoint": "bert-base-multilingual-cased",
+    "max_length": 128,
+    "learning_rate": 2e-05,
+    "batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 3,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "random_seed": 42,
+    "early_stopping_patience": 2,
+    "fp16": true,
+    "output_dir": "results/models"
+  },
+  "seed_info": {
+    "seed": 42,
+    "python_random": true,
+    "numpy_random": true,
+    "os_pythonhashseed": true,
+    "pytorch_seeded": true,
+    "cuda_deterministic": true
+  },
+  "truncation_analysis": {
+    "train": {
+      "split": "train",
+      "sample_count": 14000,
+      "max_length_configured": 128,
+      "truncated_count": 0,
+      "truncation_percentage": 0.0,
+      "min_token_length": 4,
+      "mean_token_length": 48.8,
+      "median_token_length": 51.0,
+      "p95_token_length": 66.0,
+      "max_token_length": 90
+    },
+    "dev": {
+      "split": "dev",
+      "sample_count": 3000,
+      "max_length_configured": 128,
+      "truncated_count": 0,
+      "truncation_percentage": 0.0,
+      "min_token_length": 12,
+      "mean_token_length": 49.2,
+      "median_token_length": 52.0,
+      "p95_token_length": 66.0,
+      "max_token_length": 85
+    }
+  },
+  "total_train_duration_seconds": 431.72,
+  "runtime_meta": {
+    "timestamp": "2026-10-21T07:11:58.046281",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "python_version": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "git_commit": "eae675d",
+    "dependencies": {
+      "scikit-learn": "not_installed",
+      "numpy": "2.1.3",
+      "pandas": "2.2.3",
+      "joblib": "1.6.0",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.0",
+      "seaborn": "0.13.2",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.20.1",
+      "accelerate": "1.15.0",
+      "datasets": "4.8.5",
+      "evaluate": "not_installed"
+    },
+    "cuda_available": true,
+    "device_name": "Tesla T4",
+    "device_count": 1
+  },
+  "reproducibility_caveats": {
+    "gpu_non_determinism": "Certain PyTorch CUDA convolution and reduction algorithms have non-deterministic atomic operations even when torch.backends.cudnn.deterministic is enabled.",
+    "mixed_precision": "FP16 and BF16 mixed-precision floating-point arithmetic can introduce minor rounding divergence compared to standard FP32 operations.",
+    "hardware_variation": "Executing on different GPU microarchitectures (e.g. Tesla T4 vs A100 vs V100) yields numerical precision differences in matrix multiplication."
+  },
+  "best_validation_metrics": {
+    "evaluation_phase": "Stage_1_Model_Training_Validation",
+    "evaluation_split": "dev",
+    "is_final_test_evaluation": false,
+    "model_name": "mbert",
+    "timestamp": "2026-10-21T07:09:34.028476",
+    "primary_metric": "macro_f1",
+    "macro_f1": 0.6177,
+    "accuracy": 0.6137,
+    "weighted_f1": 0.6141,
+    "per_class": {
+      "negative": {
+        "precision": 0.644,
+        "recall": 0.6056,
+        "f1": 0.6242,
+        "support": 890
+      },
+      "neutral": {
+        "precision": 0.5376,
+        "recall": 0.5576,
+        "f1": 0.5474,
+        "support": 1128
+      },
+      "positive": {
+        "precision": 0.6777,
+        "recall": 0.6853,
+        "f1": 0.6815,
+        "support": 982
+      }
+    },
+    "confusion_matrix": [
+      [
+        539,
+        300,
+        51
+      ],
+      [
+        230,
+        629,
+        269
+      ],
+      [
+        68,
+        241,
+        673
+      ]
+    ],
+    "labels_order": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "sample_count": 3000
+  },
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9433,
+      "dev_loss": 0.8712,
+      "dev_macro_f1": 0.5817,
+      "dev_accuracy": 0.5863,
+      "dev_weighted_f1": 0.5728,
+      "epoch_duration_seconds": 134.69
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7826,
+      "dev_loss": 0.8366,
+      "dev_macro_f1": 0.6177,
+      "dev_accuracy": 0.6137,
+      "dev_weighted_f1": 0.6141,
+      "epoch_duration_seconds": 137.57
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6396,
+      "dev_loss": 0.8965,
+      "dev_macro_f1": 0.6169,
+      "dev_accuracy": 0.614,
+      "dev_weighted_f1": 0.6119,
+      "epoch_duration_seconds": 140.21
+    }
+  ]
+}

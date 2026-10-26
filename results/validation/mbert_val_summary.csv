@@ -1,0 +1,2 @@
+model_name,evaluation_split,macro_f1,accuracy,weighted_f1,neg_f1,neu_f1,pos_f1,sample_count,timestamp
+mbert,dev,0.6177,0.6137,0.6141,0.6242,0.5474,0.6815,3000,2026-10-21T07:09:34.028476

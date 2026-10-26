@@ -1,0 +1,28 @@
+model_name,model_slug,noise_type,severity,severity_pct,macro_f1,delta_macro_f1,retention_pct,accuracy,delta_accuracy,weighted_f1,neg_f1,neu_f1,pos_f1,sample_count,seed
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,clean,0.0,0%,0.5915,0.0,100.0,0.5877,0.0,0.5863,0.6316,0.5096,0.6334,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.05,5%,0.5759,0.0156,97.36,0.571,0.0167,0.5713,0.6131,0.5037,0.6109,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.1,10%,0.5537,0.0378,93.61,0.5487,0.039,0.5503,0.5824,0.5021,0.5766,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.15,15%,0.5304,0.0611,89.67,0.5263,0.0614,0.5278,0.5652,0.4984,0.5278,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,typo,0.2,20%,0.5238,0.0677,88.55,0.5223,0.0654,0.5232,0.5223,0.511,0.5381,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.05,5%,0.5892,0.0023,99.61,0.5853,0.0024,0.5841,0.628,0.5091,0.6304,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.1,10%,0.5833,0.0082,98.61,0.5793,0.0084,0.578,0.6262,0.5016,0.6221,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.15,15%,0.5913,0.0002,99.97,0.587,0.0007,0.5862,0.6352,0.516,0.6225,3000,42
+Model A: Word+Char TF-IDF + LinearSVC,classical_baseline,transliteration,0.2,20%,0.5824,0.0091,98.46,0.5783,0.0094,0.5774,0.6209,0.5034,0.6231,3000,42
+MuRIL,muril,clean,0.0,0%,0.6377,0.0,100.0,0.633,0.0,0.6334,0.6546,0.5597,0.699,3000,42
+MuRIL,muril,typo,0.05,5%,0.6171,0.0206,96.77,0.6117,0.0213,0.6128,0.6405,0.5417,0.6692,3000,42
+MuRIL,muril,typo,0.1,10%,0.5948,0.0429,93.27,0.5887,0.0443,0.5909,0.622,0.532,0.6303,3000,42
+MuRIL,muril,typo,0.15,15%,0.569,0.0687,89.23,0.5637,0.0693,0.5662,0.591,0.5271,0.5888,3000,42
+MuRIL,muril,typo,0.2,20%,0.5403,0.0974,84.73,0.539,0.094,0.5393,0.5566,0.5308,0.5335,3000,42
+MuRIL,muril,transliteration,0.05,5%,0.637,0.0007,99.89,0.6323,0.0007,0.6327,0.6527,0.5593,0.699,3000,42
+MuRIL,muril,transliteration,0.1,10%,0.6342,0.0035,99.45,0.6293,0.0037,0.6297,0.6524,0.5542,0.6959,3000,42
+MuRIL,muril,transliteration,0.15,15%,0.6313,0.0064,99.0,0.6267,0.0063,0.6273,0.6426,0.5563,0.695,3000,42
+MuRIL,muril,transliteration,0.2,20%,0.6371,0.0006,99.91,0.6323,0.0007,0.6329,0.6528,0.5605,0.6981,3000,42
+XLM-RoBERTa,xlm_roberta,clean,0.0,0%,0.6323,0.0,100.0,0.6293,0.0,0.6276,0.6551,0.5498,0.692,3000,42
+XLM-RoBERTa,xlm_roberta,typo,0.05,5%,0.6177,0.0146,97.69,0.6147,0.0146,0.6127,0.6549,0.5377,0.6606,3000,42
+XLM-RoBERTa,xlm_roberta,typo,0.1,10%,0.5899,0.0424,93.29,0.587,0.0423,0.5845,0.6388,0.509,0.622,3000,42
+XLM-RoBERTa,xlm_roberta,typo,0.15,15%,0.5693,0.063,90.04,0.5663,0.063,0.5651,0.6108,0.5091,0.5882,3000,42
+XLM-RoBERTa,xlm_roberta,typo,0.2,20%,0.5432,0.0891,85.91,0.5417,0.0876,0.5386,0.6038,0.4861,0.5398,3000,42
+XLM-RoBERTa,xlm_roberta,transliteration,0.05,5%,0.6312,0.0011,99.83,0.628,0.0013,0.6263,0.6551,0.5476,0.6908,3000,42
+XLM-RoBERTa,xlm_roberta,transliteration,0.1,10%,0.6294,0.0029,99.54,0.626,0.0033,0.6246,0.6516,0.5455,0.6911,3000,42
+XLM-RoBERTa,xlm_roberta,transliteration,0.15,15%,0.6346,-0.0023,100.36,0.6313,-0.002,0.6298,0.6587,0.5505,0.6947,3000,42
+XLM-RoBERTa,xlm_roberta,transliteration,0.2,20%,0.6343,-0.002,100.32,0.6313,-0.002,0.6297,0.6556,0.5521,0.6953,3000,42
